@@ -133,7 +133,6 @@ const toggleSpinner = (show) => {
 }
 //  arrow keys to move sliders
 document.body.addEventListener('keydown', function (e) {
-  console.log(e.key);
   e = e || window.event;
   if (e.key === "ArrowLeft") {
     changeItem(-1) //left <- show Prev image
