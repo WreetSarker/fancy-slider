@@ -131,3 +131,13 @@ const toggleSpinner = (show) => {
   const spinner = document.getElementById('loading-spinner');
   show ? spinner.classList.remove('invisible') : spinner.classList.add('invisible');
 }
+//  arrow keys to move sliders
+document.body.addEventListener('keydown', function (e) {
+  console.log(e.key);
+  e = e || window.event;
+  if (e.key === "ArrowLeft") {
+    changeItem(-1) //left <- show Prev image
+  } else if (e.key === "ArrowRight") {
+    changeItem(1) // right -> show next image
+  }
+});
